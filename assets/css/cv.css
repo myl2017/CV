@@ -1,0 +1,105 @@
+/***css 精髓***/
+
+* {
+    /*border: 1px solid;*/
+    /*outline: 1px solid red;*/
+}
+
+/***header begin***/
+.header {
+    position: relative;
+    padding: 20px 15px;
+}
+
+.header > .head-bg {
+    min-height: 515px;
+    background-image: url("../img/cv-cover.jpg");
+    background-size: cover;
+    background-color: #242832;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header > .head-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.head-bg::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 51, 64, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header > .head-topbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-topbar .col-w {
+    width: 16.66667%;
+}
+
+.col-w > a.logo {
+    max-height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.logo #rs, .logo #card {
+    font-family: "Fredoka One", cursive;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#rs {
+    color: #e8676b;
+    margin-right: 3px;
+}
+
+#card {
+    color: #9a9da2;
+}
+
+.head-topbar .navgation {
+    flex-grow: 1;
+}
+
+.head-topbar .navgation > .menu {
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu > li {
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.menu > li > a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    display: block;
+    padding: 12px 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.menu > li > a:hover {
+    border-bottom: 3px solid #e8676b;
+}
+
+/***header end***/
