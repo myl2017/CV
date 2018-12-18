@@ -7,26 +7,17 @@
 
 /***header begin***/
 .header {
-    position: relative;
-    padding: 20px 15px;
+
 }
 
 .header > .head-bg {
-    min-height: 515px;
+    height: 515px;
     background-image: url("../img/cv-cover.jpg");
     background-size: cover;
     background-color: #242832;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.header > .head-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    position: relative;
 }
 
 .head-bg::before {
@@ -37,17 +28,27 @@
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
 }
 
 .header > .head-topbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 2;
+    width: 100%; /*fixed属性会让宽度缩小，因此加上width:100%*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.head-topbar > .head-topbar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 15px;
 }
 
-.head-topbar .col-w {
+.head-topbar-inner .col-w {
     width: 16.66667%;
 }
 
@@ -64,20 +65,20 @@
     font-weight: bolder;
 }
 
-#rs {
+.logo > #rs {
     color: #e8676b;
     margin-right: 3px;
 }
 
-#card {
+.logo > #card {
     color: #9a9da2;
 }
 
-.head-topbar .navgation {
+.head-topbar-inner .navgation {
     flex-grow: 1;
 }
 
-.head-topbar .navgation > .menu {
+.navgation > .menu {
     color: rgba(255, 255, 255, 0.7);
     display: flex;
     justify-content: flex-end;
@@ -90,7 +91,7 @@
 
 .menu > li > a {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1;
     display: block;
     padding: 12px 0;
@@ -103,3 +104,117 @@
 }
 
 /***header end***/
+
+.content {
+
+}
+
+.profile {
+    background-color: #ffffff;
+}
+
+.photo {
+
+}
+
+.photo-hover {
+    display: none;
+}
+
+.profile-inner {
+    max-width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.profile-info {
+    display: flex;
+    padding: 57px 50px 15px 50px;
+}
+
+.profile-info > .profile {
+    margin-left: 64px;
+    flex-grow: 1;
+}
+
+.profile-summary {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.profile-preword {
+    color: white;
+    font-weight: bold;
+    padding: 4px 16px;
+    background-color: #e8676b;
+    position: relative;
+    top: 4px;
+    left: 0;
+}
+
+.profile-preword .triangle {
+    display: block;
+    border: 10px solid transparent;
+    width: 0;
+    border-left-color: #e8676b;
+    border-top-width: 0;
+    position: absolute;
+    top: 100%;
+    left: 4px;
+}
+
+.profile-summary > h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    line-height: 1.1;
+    margin-top: 37px;
+    margin-bottom: 5px;
+}
+
+.profile-summary > p {
+    font-size: 18px;
+}
+
+.profile-list {
+
+}
+
+dl.profile-list dt, dl.profile-list dd {
+    float: left;
+    padding: 5px 0;
+}
+
+.profile-list > dt {
+    width: 30%;
+    font-weight: bold;
+}
+
+.profile-list > dd {
+    width: 70%;
+}
+
+#profile svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
+}
+
+.profile-social {
+    background-color: #e8676b;
+    text-align: center;
+}
+
+.profile-social > a {
+    display: inline-block;
+    width: 45px;
+    border-radius: 50%;
+    padding: 7.5px 0;
+    margin: 20px 15px;
+}
+
+.profile-social > a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

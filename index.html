@@ -13,68 +13,76 @@
     <header class="header">
         <div class="head-bg"></div>
         <div class="head-topbar">
-            <div class="col-w">
-                <a class="logo" href="#"><span id="rs">RS</span><span id="card">card</span></a>
+            <div class="head-topbar-inner">
+                <div class="col-w">
+                    <a class="logo" href="#"><span id="rs">RS</span><span id="card">card</span></a>
+                </div>
+                <nav class="navgation">
+                    <ul class="menu">
+                        <li><a href="#">关于</a></li>
+                        <li><a href="#">技能</a></li>
+                        <li><a href="#">作品</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">日历</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navgation">
-                <ul class="menu">
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">技能</a></li>
-                    <li><a href="#">作品</a></li>
-                    <li><a href="#">博客</a></li>
-                    <li><a href="#">日历</a></li>
-                    <li><a href="#">联系方式</a></li>
-                    <li><a href="#">其他</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
     <main class="content">
         <!--Profile Begin-->
         <section id="profile" class="section-profile">
-            <div class="profile-info">
-                <div class="picture">
-                    <img src="" alt="个人头像" title="个人头像"/>
-                </div>
-                <div class="profile">
-                    <div class="profile-summary">
-                        <div class="profile-preword">
-                            <span>welcome</span>
-                        </div>
-                        <h1>孟艳利</h1>
-                        <p>前端开发工程师</p>
+            <div class="profile-inner">
+                <div class="profile-info">
+                    <div class="picture">
+                        <img src="./assets/img/avatar.jpg" alt="个人头像" title="个人头像" class="photo"/>
+                        <img src="./assets/img/avatar.jpg" alt="个人头像悬停" title="个人头像悬停" class="photo-hover">
                     </div>
-                    <dl class="profile-list">
-                        <dt>年龄</dt>
-                        <dd>27</dd>
-                        <dt>所在城市</dt>
-                        <dd>南京</dd>
-                        <dt>邮箱</dt>
-                        <dd>mengyx92@foxmail.com</dd>
-                        <dt>手机</dt>
-                        <dd>18895787787</dd>
-                    </dl>
+                    <div class="profile">
+                        <div class="profile-summary">
+                        <span class="profile-preword">
+                            HELLO
+                            <span class="triangle"></span>
+                        </span>
+                            <h1>孟艳利</h1>
+                            <p>前端开发工程师</p>
+                        </div>
+                        <dl class="profile-list clearfix">
+                            <dt>年龄</dt>
+                            <dd>27</dd>
+                            <dt>所在城市</dt>
+                            <dd>南京</dd>
+                            <dt>邮箱</dt>
+                            <dd>mengyx92@foxmail.com</dd>
+                            <dt>手机</dt>
+                            <dd>18895787787</dd>
+                        </dl>
+                    </div>
                 </div>
-            </div>
-            <div class="profile-social">
-                <a href="#" target="_blank">
-                    <i class="icon icon-github"></i>
-                </a>
-                <a href="#" target="_blank">
-                    <i class="icon icon-jianshu"></i>
-                </a>
-                <a href="#" target="_blank">
-                    <i class="icon icon-email"></i>
-                </a>
-                <a href="#" target="_blank">
-                    <i class="icon icon-weibo"></i>
-                </a>
-                <a href="#" target="_blank">
-                    <i class="icon icon-twitter"></i>
-                </a>
-                <a href="#" target="_blank">
-                    <i class="icon icon-facebook"></i>
-                </a>
+                <div class="profile-social">
+                    <a href="#" target="_blank">
+                        <svg class="icon">
+                            <use xlink:href="#icon-github1"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank">
+                        <svg class="icon">
+                            <use xlink:href="#icon-jianshu"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank">
+                        <svg class="icon">
+                            <use xlink:href="#icon-weibo"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank">
+                        <svg class="icon">
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="download-cv">
                 <a class="button" href="#">下载 PDF 简历</a>
@@ -171,6 +179,6 @@
     </main>
     <footer class="footer">footer</footer>
 </div>
-
 </body>
+<script src="//at.alicdn.com/t/font_970274_4av7xeyamry.js"></script>
 </html>
