@@ -33,99 +33,121 @@
     </header>
     <main class="content">
         <!--Profile Begin-->
-        <section id="profile" class="section-profile">
-            <div class="profile-inner">
-                <div class="profile-info">
-                    <div class="picture">
-                        <img src="./assets/img/avatar.jpg" alt="个人头像" title="个人头像" class="photo"/>
-                        <img src="./assets/img/avatar.jpg" alt="个人头像悬停" title="个人头像悬停" class="photo-hover">
-                    </div>
-                    <div class="profile">
-                        <div class="profile-summary">
+        <div class="profile-container">
+            <section id="profile" class="section-profile">
+                <div class="profile-inner">
+                    <div class="profile-info">
+                        <div class="picture">
+                            <img src="./assets/img/avatar.jpg" alt="个人头像" title="个人头像" width="299" height="347"
+                                 class="photo"/>
+                            <img src="./assets/img/avatar.jpg" alt="个人头像悬停" title="个人头像悬停" width="299" height="347"
+                                 class="photo-hover">
+                        </div>
+                        <div class="profile">
+                            <div class="profile-summary">
                         <span class="profile-preword">
                             HELLO
                             <span class="triangle"></span>
                         </span>
-                            <h1>孟艳利</h1>
-                            <p>前端开发工程师</p>
+                                <h1>孟艳利</h1>
+                                <p>前端开发工程师</p>
+                            </div>
+                            <dl class="profile-list clearfix">
+                                <dt>年龄</dt>
+                                <dd>27</dd>
+                                <dt>所在城市</dt>
+                                <dd>南京</dd>
+                                <dt>邮箱</dt>
+                                <dd>mengyx92@foxmail.com</dd>
+                                <dt>手机</dt>
+                                <dd>18895787787</dd>
+                            </dl>
                         </div>
-                        <dl class="profile-list clearfix">
-                            <dt>年龄</dt>
-                            <dd>27</dd>
-                            <dt>所在城市</dt>
-                            <dd>南京</dd>
-                            <dt>邮箱</dt>
-                            <dd>mengyx92@foxmail.com</dd>
-                            <dt>手机</dt>
-                            <dd>18895787787</dd>
-                        </dl>
+                    </div>
+                    <div class="profile-social">
+                        <a href="#" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-github1"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-jianshu"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-weibo"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="profile-social">
-                    <a href="#" target="_blank">
-                        <svg class="icon">
-                            <use xlink:href="#icon-github1"></use>
-                        </svg>
-                    </a>
-                    <a href="#" target="_blank">
-                        <svg class="icon">
-                            <use xlink:href="#icon-jianshu"></use>
-                        </svg>
-                    </a>
-                    <a href="#" target="_blank">
-                        <svg class="icon">
-                            <use xlink:href="#icon-weibo"></use>
-                        </svg>
-                    </a>
-                    <a href="#" target="_blank">
-                        <svg class="icon">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="download-cv">
-                <a class="button" href="#">下载 PDF 简历</a>
-                <p>
-                    孟艳利，前端工程师，现在在江苏永谐文化传媒有限公司担任前端开发。<br>
-                    技能：前端开发，Vue.js开发，Boostrap开发
-                </p>
-            </div>
-        </section>
+            </section>
+        </div>
         <!--Profile End-->
+        <div class="download-cv">
+            <a class="button" href="#">下载 PDF 简历</a>
+            <p>
+                孟艳利，前端工程师，现在在江苏永谐文化传媒有限公司担任前端开发。<br>
+                技能：前端开发，Vue.js开发，Boostrap开发
+            </p>
+        </div>
         <!--Professional Skills Begin-->
         <section id="skills" class="section-skills">
             <h2>专业技能</h2>
             <div class="skills-items">
-                <ul>
-                    <li class="row">
-                        <div class="column progress-bar">
+                <ul class="skills-list clearfix">
+                    <li>
+                        <div class="progress-bar">
                             <div class="bar-data">HTML5 &amp; CSS3</div>
-                            <div class="bar-line"></div>
+                            <div class="bar-line">
+                                <div class="bar-line-inner" style="width: 70%"></div>
+                            </div>
                         </div>
-                        <div class="column progress-bar">
+                    </li>
+                    <li>
+                        <div class="progress-bar">
                             <div class="bar-data">JavaScript</div>
-                            <div class="bar-line"></div>
+                            <div class="bar-line">
+                                <div class="bar-line-inner" style="width: 60%"></div>
+                            </div>
                         </div>
                     </li>
-                    <li class="row">
-                        <div class="column progress-bar">
+                    <li>
+                        <div class="progress-bar">
                             <div class="bar-data">jQuery</div>
-                            <div class="bar-line"></div>
-                        </div>
-                        <div class="column progress-bar">
-                            <div class="bar-data">HTTP</div>
-                            <div class="bar-line"></div>
+                            <div class="bar-line">
+                                <div class="bar-line-inner" style="width: 60%"></div>
+                            </div>
                         </div>
                     </li>
-                    <li class="row">
-                        <div class="column progress-bar">
-                            <div class="bar-data">Bootstrap</div>
-                            <div class="bar-line"></div>
+                    <li>
+                        <div class="progress-bar">
+                            <div class="bar-data">HTTP</div>
+                            <div class="bar-line">
+                                <div class="bar-line-inner" style="width: 50%"></div>
+                            </div>
                         </div>
-                        <div class="column progress-bar">
+                    </li>
+                    <li>
+                        <div class="progress-bar">
+                            <div class="bar-data">Bootstrap</div>
+                            <div class="bar-line">
+                                <div class="bar-line-inner" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="progress-bar">
                             <div class="bar-data">Vue</div>
-                            <div class="bar-line"></div>
+                            <div class="bar-line">
+                                <div class="bar-line-inner" style="width: 70%"></div>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -136,33 +158,37 @@
         <section id="portfolio" class="section-portfolio">
             <h2>作品集</h2>
             <nav>
-                <ol>
+                <ol class="portfolio-menu clearfix">
                     <li>所有</li>
-                    <li>原生JS&nbsp;CSS</li>
+                    <li>原生JS&amp;CSS</li>
                     <li>框架</li>
                 </ol>
+                <div class="portfolio-bar">
+                    <div class="bar-inner"></div>
+                </div>
             </nav>
             <div class="portfolio-items">
-                <div class="big-item"></div>
-                <div class="small-item"></div>
-                <div class="small-item"></div>
+                <div class="pf-item big-item">
+                    <img src="assets/img/zpj1-1.jpg" alt="">
+                </div>
+                <div class="pf-item small-item">
+                    <img src="assets/img/zpj1-2.jpg" alt="">
+                </div>
+                <div class="pf-item small-item2">
+                    <img src="assets/img/zpj1-3.jpg" alt="">
+                </div>
             </div>
         </section>
+        <a class="morelink">+</a>
         <!--Portfolio End-->
         <!--Work Experience Begin-->
-        <section id="workExperience" class="section-work-experience">
-
-        </section>
+        <section id="workExperience" class="section-work-experience">workExperience</section>
         <!--Work Experience End-->
         <!--Education Begin-->
-        <section id="education" class="section-education">
-
-        </section>
+        <section id="education" class="section-education">education</section>
         <!--Education End-->
         <!--From The Blog Begin-->
-        <section id="blog" class="section-blog">
-
-        </section>
+        <section id="blog" class="section-blog">blog</section>
         <!--From The Blog End-->
         <!--Instagram Section Begin-->
         <section id="instagram" class="section-instagram">Instagram Section</section>
