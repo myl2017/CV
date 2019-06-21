@@ -44,6 +44,15 @@
     width: 100%; /*fixed属性会让宽度缩小，因此加上width:100%*/
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: all 0.5s;
+    color: #b7b7b7;
+}
+
+.head-topbar.sticky {
+    background: #ffffff;
+    padding: 0px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    color: #3d4451;
 }
 
 .head-topbar > .head-topbar-inner {
@@ -84,7 +93,6 @@
 }
 
 .navgation > .menu {
-    color: rgba(255, 255, 255, 0.7);
     display: flex;
     justify-content: flex-end;
 }
@@ -92,6 +100,8 @@
 .menu > li {
     margin-left: 17px;
     margin-right: 17px;
+    position: relative;
+    /*white-space: nowrap;*/
 }
 
 .menu > li > a {
@@ -102,10 +112,60 @@
     padding: 12px 0;
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
+    color: inherit;
+    position: relative;
 }
 
-.menu > li > a:hover {
-    border-bottom: 3px solid #e8676b;
+.menu > li.active > a::after, .menu > li.highlight > a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e8676b;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    animation: menuSlide .3s; /*一般取值0.3-0.5s之间*/
+}
+
+@keyframes menuSlide {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #ffffff;
+    color: #3d4451;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu > li.active > ul.submenu {
+    display: block;
+    animation: submenuSlide .3s;
+}
+
+.submenu > li {
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+
+@keyframes submenuSlide {
+    0% {
+        margin-right: 100%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
 }
 
 /***header end***/
@@ -120,6 +180,28 @@
     left: 15.5%;
     z-index: 1;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+[data-x].active {
+    /*outline: 10px solid red;*/
+}
+
+[data-x].offset {
+    transform: translateY(-30px);
+}
+
+[data-x] {
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .profile {
@@ -306,8 +388,15 @@ a.button:hover {
 
 .bar-line .bar-line-inner {
     height: 5px;
-    background-color: #e8676b;
+    /*background-color: #e8676b;*/
     border-radius: 5px;
+    width: 0%;
+}
+
+#skills.offset .bar-line .bar-line-inner {
+    width: 80%;
+    background-color: #e8676b;
+    transition: all 1s;
 }
 
 #portfolio {
@@ -386,4 +475,11 @@ a.button:hover {
 .morelink {
     display: inline-block;
     padding: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.section-center {
+    text-align: center;
 }

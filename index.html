@@ -7,25 +7,61 @@
     <title>My CV</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/cv.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
+    <style type="text/css">
+        .site-welcome {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #888888;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
+<div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+</div>
 <div class="page">
     <header class="header">
         <div class="head-bg"></div>
-        <div class="head-topbar">
+        <div id="topNavBar" class="head-topbar">
             <div class="head-topbar-inner">
                 <div class="col-w">
                     <a class="logo" href="#"><span id="rs">RS</span><span id="card">card</span></a>
                 </div>
                 <nav class="navgation">
                     <ul class="menu">
-                        <li><a href="#">关于</a></li>
-                        <li><a href="#">技能</a></li>
-                        <li><a href="#">作品</a></li>
-                        <li><a href="#">博客</a></li>
-                        <li><a href="#">日历</a></li>
-                        <li><a href="#">联系方式</a></li>
-                        <li><a href="#">其他</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#skills">技能</a></li>
+                        <li>
+                            <a href="#portfolio">作品</a>
+                            <ul class="submenu">
+                                <li>作品1</li>
+                                <li>作品2</li>
+                                <li>作品3</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#blog">博客</a>
+                            <ul class="submenu">
+                                <li>博客1</li>
+                                <li>博客2</li>
+                                <li>博客3</li>
+                            </ul>
+                        </li>
+                        <li><a href="#calendar">日历</a></li>
+                        <li><a href="#contactus">联系方式</a></li>
+                        <li><a href="#workExperience">其他</a></li>
                     </ul>
                 </nav>
             </div>
@@ -33,7 +69,7 @@
     </header>
     <main class="content">
         <!--Profile Begin-->
-        <div class="profile-container">
+        <div data-x id="about" class="profile-container">
             <section id="profile" class="section-profile">
                 <div class="profile-inner">
                     <div class="profile-info">
@@ -98,7 +134,7 @@
             </p>
         </div>
         <!--Professional Skills Begin-->
-        <section id="skills" class="section-skills">
+        <section data-x id="skills" class="section-skills">
             <h2>专业技能</h2>
             <div class="skills-items">
                 <ul class="skills-list clearfix">
@@ -106,7 +142,7 @@
                         <div class="progress-bar">
                             <div class="bar-data">HTML5 &amp; CSS3</div>
                             <div class="bar-line">
-                                <div class="bar-line-inner" style="width: 70%"></div>
+                                <div class="bar-line-inner"></div>
                             </div>
                         </div>
                     </li>
@@ -114,7 +150,7 @@
                         <div class="progress-bar">
                             <div class="bar-data">JavaScript</div>
                             <div class="bar-line">
-                                <div class="bar-line-inner" style="width: 60%"></div>
+                                <div class="bar-line-inner"></div>
                             </div>
                         </div>
                     </li>
@@ -122,7 +158,7 @@
                         <div class="progress-bar">
                             <div class="bar-data">jQuery</div>
                             <div class="bar-line">
-                                <div class="bar-line-inner" style="width: 60%"></div>
+                                <div class="bar-line-inner"></div>
                             </div>
                         </div>
                     </li>
@@ -130,7 +166,7 @@
                         <div class="progress-bar">
                             <div class="bar-data">HTTP</div>
                             <div class="bar-line">
-                                <div class="bar-line-inner" style="width: 50%"></div>
+                                <div class="bar-line-inner"></div>
                             </div>
                         </div>
                     </li>
@@ -138,7 +174,7 @@
                         <div class="progress-bar">
                             <div class="bar-data">Bootstrap</div>
                             <div class="bar-line">
-                                <div class="bar-line-inner" style="width: 65%"></div>
+                                <div class="bar-line-inner"></div>
                             </div>
                         </div>
                     </li>
@@ -146,7 +182,7 @@
                         <div class="progress-bar">
                             <div class="bar-data">Vue</div>
                             <div class="bar-line">
-                                <div class="bar-line-inner" style="width: 70%"></div>
+                                <div class="bar-line-inner"></div>
                             </div>
                         </div>
                     </li>
@@ -155,7 +191,7 @@
         </section>
         <!--Professional Skills End-->
         <!--Portfolio Begin-->
-        <section id="portfolio" class="section-portfolio">
+        <section data-x id="portfolio" class="section-portfolio">
             <h2>作品集</h2>
             <nav>
                 <ol class="portfolio-menu clearfix">
@@ -179,32 +215,146 @@
                 </div>
             </div>
         </section>
-        <a class="morelink">+</a>
+        <a class="morelink section-center">+</a>
         <!--Portfolio End-->
         <!--Work Experience Begin-->
-        <section id="workExperience" class="section-work-experience">workExperience</section>
+        <section id="workExperience" class="section-work-experience section-center">workExperience</section>
         <!--Work Experience End-->
         <!--Education Begin-->
-        <section id="education" class="section-education">education</section>
+        <section id="education" class="section-education section-center">education</section>
         <!--Education End-->
         <!--From The Blog Begin-->
-        <section id="blog" class="section-blog">blog</section>
+        <section id="blog" class="section-blog section-center">blog</section>
         <!--From The Blog End-->
         <!--Instagram Section Begin-->
-        <section id="instagram" class="section-instagram">Instagram Section</section>
+        <section id="instagram" class="section-instagram section-center">Instagram Section</section>
         <!--Instagram Section End-->
         <!--My Interests Begin-->
-        <section id="interests" class="section-interests">My Interests</section>
+        <section id="interests" class="section-interests section-center">My Interests</section>
         <!--My Interests End-->
         <!--Availability Calendar Begin-->
-        <section id="calendar" class="section-calendar">Availability Calendar</section>
+        <section id="calendar" class="section-calendar section-center">Availability Calendar</section>
         <!--Availability Calendar End-->
         <!--Contact Us Begin-->
-        <section id="contactus" class="section-contactus">Contact Us</section>
+        <section id="contactus" class="section-contactus section-center">Contact Us</section>
         <!--Contact Us End-->
     </main>
-    <footer class="footer">footer</footer>
+    <footer class="footer section-center">footer</footer>
 </div>
 </body>
 <script src="//at.alicdn.com/t/font_970274_4av7xeyamry.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+<script>
+    window.setTimeout(function () {
+        siteWelcome.classList.remove('active')
+    }, 1000)
+
+    let specialTags = document.querySelectorAll('[data-x]')
+    for (let i = 0; i < specialTags.length; i++) {
+        specialTags[i].classList.add('offset')
+    }
+
+    setTimeout(function () {
+        findClosest()
+    }, 1000)
+
+    window.onscroll = function (xxx) {
+        console.log(window.scrollY)
+        if (window.scrollY > 0) {
+            topNavBar.classList.add('sticky')
+        } else {
+            topNavBar.classList.remove('sticky')
+        }
+
+        findClosest()
+    }
+
+    function findClosest() {
+        let specialTags = document.querySelectorAll('[data-x]')
+        let minIndex = 0
+        console.log(specialTags.length)
+        for (let i = 1; i < specialTags.length; i++) {
+            if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+                minIndex = i
+            }
+        }
+
+        for (let i = 0; i < specialTags.length; i++) {
+            specialTags[i].classList.remove('active')
+        }
+        specialTags[minIndex].classList.add('active')
+        let id = specialTags[minIndex].id
+        let a = document.querySelector('a[href="#' + id + '"]')
+        let li = a.parentNode
+        let brothersAndMe = li.parentNode.children
+        for (let i = 0; i < brothersAndMe.length; i++) {
+            brothersAndMe[i].classList.remove('highlight')
+        }
+        li.classList.add('highlight')
+    }
+
+    let liTags = document.querySelectorAll('nav.navgation > ul > li')
+    console.log(liTags)
+    for (let i = 0; i < liTags.length; i++) {
+        liTags[i].onmouseenter = function (x) {
+//            let a = x.currentTarget
+//            let brother = a.nextSibling
+//            while (brother.nodeType === 3) { //文本节点
+//                brother = brother.nextSibling
+//            }
+//            brother.classList.add('active')
+            x.currentTarget.classList.add('active')
+        }
+
+        liTags[i].onmouseleave = function (x) {
+//            let a = x.currentTarget
+//            let brother = a.nextSibling
+//            while (brother.nodeType === 3) { //文本节点
+//                brother = brother.nextSibling
+//            }
+//            brother.classList.remove('active')
+            x.currentTarget.classList.remove('active')
+        }
+    }
+
+
+    let aTags = document.querySelectorAll('nav.navgation > ul > li > a')
+    // Setup the animation loop.
+    function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+
+    for (let i = 0; i < aTags.length; i++) {
+        aTags[i].onclick = function (x) {
+            x.preventDefault()
+            let a = x.currentTarget
+            let href = a.getAttribute('href')
+            let element = document.querySelector(href)
+            let top = element.offsetTop
+//            window.scrollTo(0, top - 80)
+
+            let currentTop = window.scrollY
+            let targetTop = top - 80
+            let s = targetTop - currentTop
+            const coords = {y: currentTop}; // Start at (0, 0)
+            var t = Math.abs((s / 100) * 300)
+            if (t > 500) {
+                t = 500
+            }
+
+
+            const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
+                .to({y: targetTop}, t) // Move to (300, 200) in 1 second.
+                .easing(TWEEN.Easing.Quadratic.InOut) // Use an easing function to make the animation smooth.
+                .onUpdate(() => { // Called after tween.js updates 'coords'.
+                    // Move 'box' to the position described by 'coords' with a CSS translation.
+//                    box.style.setProperty('transform', `translate(${coords.x}px, ${coords.y}px)`);
+                    window.scrollTo(0, coords.y)
+                })
+                .start(); // Start the tween immediately.
+        }
+    }
+</script>
 </html>
